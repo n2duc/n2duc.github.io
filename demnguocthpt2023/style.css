@@ -6,9 +6,14 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body {
+#images {
     /* background: linear-gradient(45deg, #495057, #ccc); */
-    background-image: url("./bg.jpg");
+    position: fixed;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
