@@ -8,7 +8,7 @@
 }
 body {
     /* background: linear-gradient(45deg, #495057, #ccc); */
-    background-image: url("/bg.jpg");
+    background-image: url("./bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
