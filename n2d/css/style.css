@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    width: 0.5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+    background: linear-gradient(#2B2969, #004d7a);
+}
+body {
+    background: linear-gradient(45deg, #eee, #ccc);
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    min-height: 60px;
+    width: 100%;
+    background: linear-gradient(90deg, #452455 0%, #2B2969 100%);
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
+}
+.nav_logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.nav_list {
+    display: flex;
+    width: 440px;
+    justify-content: space-between;
+}
+.nav_list li {
+    list-style: none;
+    transition: all 0.3s linear;
+}
+.nav_list li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav_list li a.blog {
+    padding: 5px 10px;
+    background: linear-gradient(135deg, #00FF8F 0%, #00A1FF 100%);;
+    border-radius: 14px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40vh;
+    background: linear-gradient(to right top, #ffc147, #008793);
+}
+section h1,
+footer h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+#home {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    flex-direction: column;
+}
+#home p {
+    padding: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+#about {
+    background-image: linear-gradient(to right top, #6665ff, #ff45bf, #ff7571, #ffc147, #d6ff7a);
+}
+#contact {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
