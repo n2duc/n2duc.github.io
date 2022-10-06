@@ -18,6 +18,34 @@ html::-webkit-scrollbar-thumb {
 body {
     background: linear-gradient(45deg, #eee, #ccc);
 }
+.scroll-top {
+    position: fixed;
+    bottom: -100%;
+    right: 1.5rem;
+    z-index: 1000;
+    transition: 0.5s ease;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.scroll-top h3 {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #051937;
+    border-radius: 0.2rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    text-transform: uppercase;
+}
+.scroll-top h3:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+.scroll-active {
+    bottom: 2rem;
+    transition: 0.5s ease;
+}
 nav {
     display: flex;
     justify-content: space-around;
