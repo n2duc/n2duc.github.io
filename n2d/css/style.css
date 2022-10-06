@@ -13,7 +13,7 @@ html::-webkit-scrollbar {
 }
 html::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
-    background: linear-gradient(#00FF8F, #00A1FF, #ffc147, #ff45bf);
+    background: linear-gradient(#00A1FF, #00FF8F,  #ffc147, #ff45bf);
 }
 body {
     background: linear-gradient(45deg, #eee, #ccc);
