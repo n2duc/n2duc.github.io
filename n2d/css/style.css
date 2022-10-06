@@ -13,7 +13,7 @@ html::-webkit-scrollbar {
 }
 html::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
-    background: linear-gradient(#2B2969, #004d7a);
+    background: linear-gradient(#00FF8F, #00A1FF, #ffc147, #ff45bf);
 }
 body {
     background: linear-gradient(45deg, #eee, #ccc);
@@ -120,6 +120,7 @@ footer h1 {
 #home {
     background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     flex-direction: column;
+    gap: 20px;
 }
 #home p {
     padding: 20px;
