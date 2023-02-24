@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+:root {
+
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #334155;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    
+}
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 52px;
+    background: #111827;
+    z-index: 99;
+}
+.profile {
+    padding: 102px 0 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    width: 640px;
+    height: 250px;
+    background: #94a3b8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    width: 700px;
+    background-image: linear-gradient(180deg, rgb(0, 131, 225), rgb(62, 67, 165));
+    height: 90%;
+    animation: rotBGimg 10s linear infinite;
+    transition: all 0.2s linear;
+}
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.card::after {
+    content: '';
+    position: absolute;
+    background: #F1F1F1;
+    inset: 5px;
+    border-radius: 14px;
+}
+
+.card_content,
+.card-button {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_content {
+    margin-bottom: 32px;
+}
+.card-button {
+    padding: 0 60px;
+}
+.card_content-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.card_content-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.card_content-avatar:hover img {
+    transform: scale(1.2) translateX(10px);
+}
+.card_content-info .info-name {
+    font-size: 14px;
+    color: #0f172a;
+    font-weight: 600;
+    background-color: #d4dde9;
+    padding: 4px 6px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+.card_content-info .info-role {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.card_content-info .info-role span {
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0284c7;
+    background: #bae6fd;
+}
+.card_content-skills {
+    width: 260px;
+    height: 110px;
+    background: #D9D9D9;
+    border-radius: 9px;
+}
+
+.social-btn svg {
+    height: 25px;
+}
+.social-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7e7e7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+}
+.social-btn::before, .social-btn::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+}
+.social-btn::before {
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: #4d60b6;
+}
+.social-btn::after {
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: #4453a6;
+}
+.social-btn:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.social-btn:hover span {
+    opacity: 0;
+    z-index: -3;
+}
+.social-btn:hover::before {
+    opacity: 0.5;
+    transform: translateY(-101%);
+}
+
+.social-btn:hover::after {
+    opacity: 0.5;
+    transform: translateY(101%);
+}
+.social-btn span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: 'Fira Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+}
+.social-btn .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+.social-btn .social-link svg {
+    text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+    transform: scale(1);
+}
+.social-btn .social-link:hover {
+    background-color: rgba(249, 244, 255, 0.774);
+    animation: bounce_613 0.4s linear;
+}
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+    60% {
+        transform: scale(0.8);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.card-button .add-friend-btn,
+.card-button .about-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.card-button .add-friend-btn span,
+.card-button .about-btn span {
+    z-index: 20;
+}
+.add-friend-btn {
+    background: #4d60b6;
+}
+.card-button .about-btn {
+    background: #4453a6;
+}
+.about-btn::after,
+.add-friend-btn::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+}
+.about-btn::after {
+    left: 0;
+}
+.add-friend-btn:hover,
+.about-btn:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.about-btn:hover::after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+.add-friend-btn:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.content {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 200vh;
+    background: #94a3b8;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

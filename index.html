@@ -1,408 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Responsive Portfolio Website Demo</title>
-        <!-- CSS Link -->
-        <link rel="stylesheet" href="css/style.css" />
-        <!-- Swiper CSS Link -->
-        <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-        <!-- Boxicon Link -->
-        <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <!-- Dark_Light Mode -->
-        <div class="dark-light">
-            <i class="bx bxs-moon moon"></i>
-            <i class="bx bxs-sun sun"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N2D</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"></div>
+        <div class="container">
+            <div class="profile">
+                <div class="card">
+
+                    <div class="card_content">
+                        <div class="card_content-avatar">
+                            <img src="./avt_1.jpg" alt="Duc pro vip">
+                        </div>
+                        <div class="card_content-info">
+                            <div class="info-name">Ngoc Duc - N2D</div>
+                            <div class="info-role">
+                                <span>Web Developer</span>
+                                <span>Designer</span>
+                            </div>
+                        </div>
+                        <div class="card_content-skills"></div>
+                    </div>
+
+                    <div class="card-button">
+                        <a href="https://www.facebook.com/ngocduc.n2d/" class="add-friend-btn" target="_blank"><span>+ Friend</span></a>
+                        <div class="social-btn">
+                            <span>Social</span>
+                            <a class="social-link" href="#">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.001 461.001" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F61C0D;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path> </g> </g></svg>
+                            </a>
+                            <a class="social-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 248 204">
+                                    <path fill="#1d9bf0" d="M221.95 51.29c.15 2.17.15 4.34.15 6.53 0 66.73-50.8 143.69-143.69 143.69v-.04c-27.44.04-54.31-7.82-77.41-22.64 3.99.48 8 .72 12.02.73 22.74.02 44.83-7.61 62.72-21.66-21.61-.41-40.56-14.5-47.18-35.07 7.57 1.46 15.37 1.16 22.8-.87-23.56-4.76-40.51-25.46-40.51-49.5v-.64c7.02 3.91 14.88 6.08 22.92 6.32C11.58 63.31 4.74 33.79 18.14 10.71c25.64 31.55 63.47 50.73 104.08 52.76-4.07-17.54 1.49-35.92 14.61-48.25 20.34-19.12 52.33-18.14 71.45 2.19 11.31-2.23 22.15-6.38 32.07-12.26-3.77 11.69-11.66 21.62-22.2 27.93 10.01-1.18 19.79-3.86 29-7.95-6.78 10.16-15.32 19.01-25.2 26.16z"/>
+                                </svg>
+                            </a>
+                            <a class="social-link" href="#">
+                                <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"> </path> </g> </g></svg>
+                            </a>
+                            <a class="social-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                        <div class="about-btn"><span>About</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content"></div>
         </div>
-        <!-- Scroll To Top -->
-        <a href="#home" class="scroll-top">
-            <i class="bx bx-up-arrow-alt"></i>
-        </a>
-
-        <!-- Header -->
-        <header>
-            <!-- Nav -->
-            <div class="nav container">
-                <!-- Logo -->
-                <a href="#" class="logo">N2Duc</a>
-                <!-- Navbar -->
-                <ul class="navbar">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <!-- Menu Icon -->
-                <div class="menu-icon">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Home Section -->
-        <section id="home" class="home container">
-            <div class="home-content">
-                <div class="home-img">
-                    <img src="./img/profile.png" alt="" />
-                </div>
-                <div class="home-text">
-                    <h3>Hello World</h3>
-                    <h2>I'm <span class="color">N2Ducc</span></h2>
-                    <p>
-                        I am a student of
-                        <span class="color"
-                            ><a href="https://duytan.edu.vn/" target="_blank"
-                                >Duy Tan University</a
-                            ></span
-                        >. My profession is a
-                        <span class="color">Web Developer</span> &
-                        <span class="color">Web Designer</span> with 2 years of
-                        experience in the field. <br />Here's a bit more
-                        <span class="color">about me</span>.
-                    </p>
-                    <!-- Social -->
-                    <div class="social">
-                        <a href="#"><i class="bx bxl-instagram"></i></a>
-                        <a href="#"><i class="bx bxl-facebook"></i></a>
-                        <a href="#"><i class="bx bxl-github"></i></a>
-                        <a href="#"><i class="bx bxl-telegram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about container">
-            <!-- Heading -->
-            <h2 class="heading">About</h2>
-            <!-- About Content -->
-            <div class="about-content">
-                <div class="about-data">
-                    <span>About Me</span>
-                    <h2>
-                        Web Developer, <br />
-                        Editer & Web Designer
-                    </h2>
-                    <a href="img/cv.png" class="btn" download="">
-                        Download CV
-                        <i class="bx bx-download"></i>
-                    </a>
-                    <a
-                        href="https://n2duc.github.io/login/"
-                        class="btn"
-                        target="_blank"
-                    >
-                        My Blog
-                        <i class="bx bxl-blogger"></i>
-                    </a>
-                </div>
-                <div class="about-text">
-                    <p>
-                        Hello! I am Ngoc Duc and my nickname is N2D. Web
-                        Developer, Editer & Web Designer.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Nulla explicabo asperiores necessitatibus maiores
-                        consequuntur cupiditate.
-                    </p>
-                    <p>Get your project book with contact button.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="services container">
-            <!-- Heading -->
-            <h2 class="heading">Services</h2>
-            <!-- Services Content -->
-            <div class="services-content">
-                <div class="services-box">
-                    <i class="bx bx-code-alt"></i>
-                    <h2>Web Development</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet dolorem exercitationem nisi, consequuntur animi
-                        laboriosam.
-                    </p>
-                </div>
-                <div class="services-box">
-                    <i class="bx bx-brush"></i>
-                    <h2>Web Designing</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet dolorem exercitationem nisi, consequuntur animi
-                        laboriosam.
-                    </p>
-                </div>
-                <div class="services-box">
-                    <i class="bx bxs-videos"></i>
-                    <h2>Video Editing</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet dolorem exercitationem nisi, consequuntur animi
-                        laboriosam.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio container">
-            <!-- Heading -->
-            <h2 class="heading">Portfolio</h2>
-            <!-- Portfolio content -->
-            <div class="portfolio-content">
-                <div class="portfolio-box">
-                    <img
-                        src="img/webdev.png"
-                        alt=""
-                        class="portfolio-img"
-                    />
-                    <!-- Overlay -->
-                    <div class="portfolio-overlay">
-                        <h2>Web Development</h2>
-                        <a href="https://n2duc.github.io/n2d">
-                            <i class="bx bx-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="img/website1.png" alt="" class="portfolio-img" />
-                    <!-- Overlay -->
-                    <div class="portfolio-overlay">
-                        <h2>Web Designing</h2>
-                        <a href="https://n2duc.github.io/demnguocthpt2023">
-                            <i class="bx bx-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img
-                        src="img/portfolio-3.webp"
-                        alt=""
-                        class="portfolio-img"
-                    />
-                    <!-- Overlay -->
-                    <div class="portfolio-overlay">
-                        <h2>Video Editing</h2>
-                        <a href="#">
-                            <i class="bx bx-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img
-                        src="img/portfolio-4.webp"
-                        alt=""
-                        class="portfolio-img"
-                    />
-                    <!-- Overlay -->
-                    <div class="portfolio-overlay">
-                        <h2>Others</h2>
-                        <a href="https://n2duc.github.io/TokudaFocus">
-                            <i class="bx bx-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects container">
-            <!-- Heading -->
-            <h2 class="heading">Projects</h2>
-            <!-- Projects Content -->
-            <div class="projects-content">
-                <div class="project-box">
-                    <h2>28+</h2>
-                    <span>Projects Completed</span>
-                </div>
-                <div class="project-box">
-                    <h2>12+</h2>
-                    <span>Websites Develop</span>
-                </div>
-                <div class="project-box">
-                    <h2>20+</h2>
-                    <span>Logo Desinger</span>
-                </div>
-            </div>
-            <div class="skills-bar">
-                <div class="bar">
-                    <div class="info">
-                        <span>HTML</span>
-                    </div>
-                    <div class="progress-line html"><span></span></div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <span>CSS</span>
-                    </div>
-                    <div class="progress-line css"><span></span></div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <span>Javascript</span>
-                    </div>
-                    <div class="progress-line js"><span></span></div>
-                </div>
-                <div class="bar">
-                    <div class="info">
-                        <span>Photoshop</span>
-                    </div>
-                    <div class="progress-line pts"><span></span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Review -->
-        <section id="reviews" class="reviews container">
-            <!-- Heading -->
-            <h2 class="heading">Reviews</h2>
-            <!-- Review Content -->
-            <div class="reviews-content swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <!-- Review Box -->
-                        <div class="review-box">
-                            <i class="bx bxs-quote-right"></i>
-                            <p class="review-text">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Odit quidem maiores laboriosam
-                                vel repellendus omnis unde, ipsa reiciendis
-                                quibusdam. Earum perspiciatis quo aliquam et
-                                totam?
-                            </p>
-                            <div class="review-profile">
-                                <h2>SonTung-MTP</h2>
-                                <span>From Mountain</span>
-                                <img src="img/review-1.jpg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Review Box -->
-                        <div class="review-box">
-                            <i class="bx bxs-quote-right"></i>
-                            <p class="review-text">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Odit quidem maiores laboriosam
-                                vel repellendus omnis unde, ipsa reiciendis
-                                quibusdam. Earum perspiciatis quo aliquam et
-                                totam?
-                            </p>
-                            <div class="review-profile">
-                                <h2>Thieu Bao Tham</h2>
-                                <span>From BrokenHeart</span>
-                                <img src="img/review-2.jpg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Review Box -->
-                        <div class="review-box">
-                            <i class="bx bxs-quote-right"></i>
-                            <p class="review-text">
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Odit quidem maiores laboriosam
-                                vel repellendus omnis unde, ipsa reiciendis
-                                quibusdam. Earum perspiciatis quo aliquam et
-                                totam?
-                            </p>
-                            <div class="review-profile">
-                                <h2>Sea Tus</h2>
-                                <span>From MatCha</span>
-                                <img src="img/review-3.jpg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Dots Control -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section id="contact" class="contact container">
-            <!-- Heading -->
-            <h2 class="heading">Contact</h2>
-            <!-- Contact Form -->
-            <form action="" id="contact-form" class="contact-form">
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    class="name"
-                    required
-                />
-                <input
-                    type="email"
-                    placeholder="Email Address"
-                    class="email"
-                    required
-                />
-                <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    placeholder="Write message here"
-                    class="message"
-                    required
-                ></textarea>
-                <input type="submit" value="Send" class="send-btn" />
-            </form>
-        </section>
-
-        <!-- Footer Section -->
-        <section id="footer" class="footer container">
-            <!-- Social -->
-            <div class="social">
-                <a href="#"><i class="bx bx-envelope"></i></a>
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-twitter"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-            </div>
-            <!-- Link -->
-            <div class="footer-link">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms Of Use</a>
-                <a href="#">Disclaimer</a>
-            </div>
-            <!-- Copyright -->
-            <p>&#169; N2D Coding</p>
-        </section>
-
-        <!-- EmailJS Link -->
-        <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-        ></script>
-        <script type="text/javascript">
-            (function () {
-                // Public API Key
-                emailjs.init("7b_NbG32OGn5I61VD");
-            })();
-        </script>
-        <!-- Sweet Alert Link -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <!-- Swiper Script Link -->
-        <script src="./js/swiper-bundle.min.js"></script>
-        <!-- Scroll Reveal -->
-        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-        <!-- Script Link -->
-        <script src="./js/main.js"></script>
-    </body>
+    </div>
+</body>
 </html>
