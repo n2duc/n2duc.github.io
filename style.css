@@ -19,19 +19,9 @@ body {
 a {
     text-decoration: none;
 }
-.green-1 {
-    background: #5eae08;
-}
-.blue-1 {
-    background: #4453a6;
-}
-.orange-1 {
-    background: #f1be5f;
-}
 .container {
     width: 1140px;
     margin: 0 auto;
-    
 }
 .header {
     position: fixed;
@@ -39,11 +29,36 @@ a {
     right: 0;
     width: 100%;
     height: 52px;
-    background: #111827;
+    background: rgba(255, 255, 255, 0.088);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     z-index: 99;
 }
+.header .logo {
+    position: absolute;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #dbeafe;
+    top: 6px;
+    left: 50px;
+}
+.header .flag-vn {
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    overflow: hidden;
+    right: 30px;
+    top: 10px;
+    border-radius: 4px;
+}
+.header .flag-vn svg {
+    width: 100%;
+    height: 100%;
+}
 .profile {
-    padding: 102px 0 73px;
+    padding: 94px 0 73px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,7 +373,7 @@ a {
     outline: 5px solid rgb(155, 180, 219);
     outline-offset: -5px;
 }
-.content::after {
+.content::before {
     position: absolute;
     content: '';
     width: 400px;
@@ -369,6 +384,21 @@ a {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgb(155, 180, 219);
+}
+.content::after {
+    position: absolute;
+    content: 'Projects';
+    color: #fff;
+    height: 30px;
+    top: -20px;
+    left: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 50px;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    background-color: #4453a6;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 .content-items {
     padding: 80px 80px;
@@ -381,7 +411,7 @@ a {
     width: 300px;
     height: 180px;
     padding: 10px;
-    background: #cbd5e1;
+    background: rgb(155, 180, 219);
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
     overflow: hidden;
@@ -416,9 +446,9 @@ a {
     position: absolute;
     top: 30px;
     right: 20px;
-    color: #333;
+    color: #0f172a;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     writing-mode: vertical-lr;
     transition: .2s ease;
@@ -446,7 +476,7 @@ a {
     bottom: 20px;
     width: 30px;
     height: 30px;
-    border: none;
+    border: 1px solid #64748b;
     outline: none;
     border-radius: 30px;
     cursor: pointer;
@@ -455,6 +485,7 @@ a {
 }
 .content-items .item:hover button {
     transform: scale(11);
+    border: none;
     opacity: .5;
 }
 .content-items .item:hover h2 {
@@ -479,8 +510,8 @@ a {
 .footer {
     position: relative;
     width: 100%;
-    height: 60px;
-    padding: 14px 0;
+    height: 50px;
+    padding: 10px 0;
     bottom: 0;
     left: 0;
 }
@@ -489,19 +520,18 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 30%;
+    width: 50%;
     height: 100%;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
     color: #111827;
     /* background: #6689ac; */
-    background: rgba(255, 255, 255, 0.358);
+    background: rgba(255, 255, 255, 0.242);
     box-shadow: 0 8px 32px 0 rgba(25, 26, 39, 0.37);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    border: 1px solid rgba(255, 255, 255, 0.516);
     user-select: none;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 
