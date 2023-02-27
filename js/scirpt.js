@@ -1,3 +1,8 @@
+const header = document.querySelector('.header')
+window.addEventListener('scroll', () => {
+    header.classList.toggle('active', window.scrollY > 0)
+})
+
 const modalBtn = document.querySelector('.about-btn')
 const modalOverlay = document.querySelector('.modal-about')
 const closeModalBtn = document.querySelector('.btn-close-modal')
@@ -32,4 +37,4 @@ dataProject.map((item) => {
             <button style="background: ${item.color};"></button>
         </a>`)
 });
-console.log(listItems.innerHTML = Items.join(""));
+listItems.innerHTML = Items.join("");

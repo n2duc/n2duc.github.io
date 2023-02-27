@@ -19,6 +19,7 @@ body {
 a {
     text-decoration: none;
 }
+
 .container {
     width: 1140px;
     margin: 0 auto;
@@ -29,36 +30,103 @@ a {
     right: 0;
     width: 100%;
     height: 52px;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.073);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    transition: background .3s ease;
+}
+.header.active {
     background: rgba(255, 255, 255, 0.088);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 99;
 }
-.header .logo {
-    position: absolute;
+.header .navbar {
+    width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo {
     font-size: 26px;
     font-weight: 800;
     letter-spacing: 1px;
     color: #dbeafe;
-    top: 6px;
-    left: 50px;
 }
-.header .flag-vn {
-    position: absolute;
+.navbar .title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #f2f8ff;
+    text-transform: uppercase;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-right .flag-vn {
     width: 45px;
     height: 30px;
     overflow: hidden;
-    right: 30px;
-    top: 10px;
     border-radius: 4px;
+    margin-left: 20px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.header .flag-vn svg {
+.nav-right .flag-vn svg {
     width: 100%;
     height: 100%;
 }
+.nav-right .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 30px;
+}
+.nav-right .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.nav-right .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(79, 47, 185, 0.5);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+    border-radius: 30px;
+}
+.nav-right .switch .slider::before {
+    position: absolute;
+    content: "";
+    height: 1.25em;
+    width: 1.25em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #a3dafb;
+    background: rgba(76, 53, 152, 0);
+    transition: .5s;
+}
+.switch input:checked + .slider {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+}
+.switch input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #ffcb5a;
+}
 .profile {
     padding: 94px 0 73px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,9 +148,10 @@ a {
     content: '';
     position: absolute;
     width: 700px;
-    background-image: linear-gradient(180deg, rgb(57, 90, 173), rgb(66, 70, 156), rgb(29, 27, 95));
-    height: 90%;
-    animation: rotBGimg 10s linear infinite;
+    /* background-image: linear-gradient(180deg, rgb(57, 90, 173), rgb(57, 90, 173), rgb(29, 27, 95)); */
+    background-image: linear-gradient(180deg, transparent, rgb(44, 77, 160), rgb(51, 47, 182), rgb(51, 47, 182), rgb(44, 77, 160), transparent);
+    height: 100%;
+    animation: rotBGimg 5s linear infinite;
     transition: all 0.2s linear;
 }
 @keyframes rotBGimg {
@@ -98,7 +167,7 @@ a {
     position: absolute;
     background: rgb(51,65,85);
     background: linear-gradient(145deg, rgba(51,65,85,1) 0%, rgba(100,116,139,1) 71%, rgba(30,41,59,1) 100%);
-    inset: 5px;
+    inset: 4px;
     border-radius: 14px;
 }
 
@@ -197,7 +266,7 @@ a {
 .card_content-skills svg {
     width: 30px;
     height: 30px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-out;
 }
 .card_content-skills svg:hover {
     transform: scale(1.2);
@@ -363,15 +432,15 @@ a {
 /* Content */
 .content {
     position: relative;
-    margin-bottom: 46px;
+    margin-bottom: 20px;
     width: 100%;
     background: linear-gradient(145deg, rgba(51,65,85,1) 0%, rgba(100,116,139,1) 71%, rgba(30,41,59,1) 100%);
     box-shadow: 0 8px 32px 0 rgba(37, 38, 54, 0.37);
     backdrop-filter: blur( 5.5px );
     -webkit-backdrop-filter: blur( 5.5px );
     border-radius: 10px;
-    outline: 5px solid rgb(155, 180, 219);
-    outline-offset: -5px;
+    outline: 4px solid rgba(219, 232, 251, 0.5);
+    outline-offset: -4px;
 }
 .content::before {
     position: absolute;
@@ -383,7 +452,7 @@ a {
     transform: translateX(-50%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: rgb(155, 180, 219);
+    background-color: #8d9aae;
 }
 .content::after {
     position: absolute;
@@ -398,7 +467,6 @@ a {
     transform: translateX(-50%);
     border-radius: 6px;
     background-color: #4453a6;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 .content-items {
     padding: 80px 80px;
@@ -411,8 +479,11 @@ a {
     width: 300px;
     height: 180px;
     padding: 10px;
-    background: rgb(155, 180, 219);
+    background: rgba(0, 0, 0, 0.137);
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(232, 236, 255, 0.5);
+    border-right: 1px solid rgba(232, 236, 255, 0.2);
+    border-bottom: 1px solid rgba(232, 236, 255, 0.2);
     border-radius: 12px;
     overflow: hidden;
 }
@@ -446,7 +517,7 @@ a {
     position: absolute;
     top: 30px;
     right: 20px;
-    color: #0f172a;
+    color: #eeeeee;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -510,28 +581,26 @@ a {
 .footer {
     position: relative;
     width: 100%;
-    height: 50px;
-    padding: 10px 0;
+    height: 60px;
     bottom: 0;
     left: 0;
 }
 .footer .copyright {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
-    width: 50%;
+    padding: 0 20px;
+    width: 74%;
     height: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer .copyright p {
     font-size: 1rem;
     font-weight: 400;
-    color: #111827;
-    /* background: #6689ac; */
-    background: rgba(255, 255, 255, 0.242);
-    box-shadow: 0 8px 32px 0 rgba(25, 26, 39, 0.37);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    color: #f5f5f5;
     user-select: none;
-    border-radius: 8px;
 }
 
 
@@ -539,8 +608,9 @@ a {
 .modal-about {
     position: fixed;
     top: 0;
+    left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -550,11 +620,13 @@ a {
 .modal-inner {
     width: 600px;
     height: 200px;
-    padding: 10px 20px;
-    background: rgba( 255, 255, 255, 0.35 );
-    backdrop-filter: blur( 5.5px );
-    -webkit-backdrop-filter: blur( 5.5px );
+    padding: 10px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(213, 213, 213, 0.2);
+    border-bottom: 1px solid rgba(213, 213, 213, 0.2);
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     animation: openModal 0.2s ease;
@@ -563,13 +635,34 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 16px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+.modal-header .about-me {
+    color: #ffffff;
 }
 .btn-close-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 .btn-close-modal svg {
     width: 30px;
+    fill: #ffffff;
 }
+.btn-close-modal:hover svg {
+    fill: #d7d7d7;
+}
+.modal-content {
+    color: #ffffff;
+    padding: 5px 16px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
 .modal-about.hidden {
     display: none;
 }
