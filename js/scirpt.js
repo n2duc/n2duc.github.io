@@ -1,13 +1,26 @@
 const header = document.querySelector('.header')
-window.addEventListener('scroll', () => {
-    header.classList.toggle('active', window.scrollY > 0)
-})
-
 const modalBtn = document.querySelector('.about-btn')
 const modalOverlay = document.querySelector('.modal-about')
 const closeModalBtn = document.querySelector('.btn-close-modal')
 const listItems = document.querySelector('.content-items')
+const darkModeBtn = document.getElementById('darkMode')
+const body = document.querySelector("body")
 
+// Dark Mode
+darkModeBtn.addEventListener('change', () => {
+    if (darkModeBtn.checked) {
+        console.log("checked")
+        body.classList.add('dark')
+    } else {
+        body.classList.remove('dark')
+    }
+})
+console.log(darkModeBtn)
+
+// Active Header Scroll
+window.addEventListener('scroll', () => {
+    header.classList.toggle('active', window.scrollY > 0)
+})
 // Modal
 function openModal() {
     modalOverlay.classList.remove('hidden')
